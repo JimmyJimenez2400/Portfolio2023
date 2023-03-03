@@ -170,5 +170,20 @@ a {
 }
 
 .projects-showcase {
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(150px, 400px));
+  grid-template-rows: repeat(1, minmax(150px, 400px));
+  grid-auto-rows: minmax(150px, 400px);
+  gap: 30px;
   background-color: black;
+  border-radius: 2rem;
+
+}
+
+.project-card {
+  background-color: white;
+  color: black;
+  border-radius: 1em;
+  padding: 2rem;
 }
