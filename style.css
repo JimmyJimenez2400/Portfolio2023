@@ -191,6 +191,7 @@ a {
   color: black;
   border-radius: 1em;
   padding: 2rem;
+  overflow: scroll;
 }
 
 .card-img {
@@ -224,4 +225,25 @@ a {
   color: white;
   max-width: 100%;
   border-radius: 1em;
+}
+
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.skillsOrder {
+  display: flex;
+  background-color: black;
+  padding: 2rem;
+  border-radius: 1em;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.skillsOrder li {
+  flex: 1;
 }
