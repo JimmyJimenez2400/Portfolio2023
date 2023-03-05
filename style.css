@@ -1,3 +1,11 @@
+:root {
+  --Engineering-Orange: #B80C09;
+  --Indigo-Dye: #0B4F6C;
+  --Process-Cyan: #01BAEF;
+  --Ghost-White: #FBFBFF;
+  --Rich-Black: #040F16;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -14,7 +22,7 @@ body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 16px;
   color: white;
-  background-color: black;
+  background-color: var(--Rich-Black);
 }
 
 ul {
@@ -23,6 +31,24 @@ ul {
 
 a {
   text-decoration: none;
+}
+
+button,
+input,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  width: 150px;
+}
+
+input {
+  appearance: none;
+}
+
+img {
+  max-width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 
@@ -34,19 +60,19 @@ a {
 }
 
 #header {
-  background-color: rgb(212, 135, 42);
+  background-color: var(--Indigo-Dye);
   height: 100%;
   flex: 1;
 }
 
 #main {
-  background-color: cadetblue;
+  background-color: var(--Process-Cyan);
   flex: 2;
   height: 100%
 }
 
 #footer {
-  background-color: darkcyan;
+  background-color: var(--Indigo-Dye);
   height: 100%;
   flex: 1;
 }
@@ -55,7 +81,8 @@ a {
 .experience-container,
 .projects-container,
 .skills-container,
-.contact-container {
+.contact-container,
+.footer-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -106,7 +133,7 @@ a {
 }
 
 .header-links a:hover {
-  background-color: black;
+  background-color: var(--Engineering-Orange);
   border-radius: 20px;
 }
 
@@ -176,7 +203,7 @@ a {
   grid-template-rows: repeat(1, minmax(150px, 400px));
   grid-auto-rows: minmax(150px, 400px);
   gap: 30px;
-  background-color: black;
+  background-color: var(--Rich-Black);
   border-radius: 2rem;
   flex-wrap: wrap;
   line-height: 1.4em;
@@ -187,8 +214,8 @@ a {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(4, 1fr);
-  background-color: white;
-  color: black;
+  background-color: var(--Ghost-White);
+  color: var(--Rich-Black);
   border-radius: 1em;
   padding: 2rem;
   overflow: scroll;
@@ -221,8 +248,8 @@ a {
 .card-links a {
   padding: 0.5em;
   margin-right: 1em;
-  background-color: black;
-  color: white;
+  background-color: var(--Rich-Black);
+  color: var(--Ghost-White);
   max-width: 100%;
   border-radius: 1em;
 }
@@ -237,7 +264,7 @@ a {
 
 .skillsOrder {
   display: flex;
-  background-color: black;
+  background-color: var(--Rich-Black);
   padding: 2rem;
   border-radius: 1em;
   flex-wrap: wrap;
@@ -246,4 +273,91 @@ a {
 
 .skillsOrder li {
   flex: 1;
+}
+
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.contact-form {
+  width: 100%;
+  background-color: var(--Rich-Black);
+  padding: 2rem;
+  border-radius: 1em;
+}
+
+.form-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form-list>.form-row {
+  margin-bottom: 1em;
+}
+
+.form-row {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.form-row label {
+  font-size: clamp(16px, 1.5vw, 60rem);
+  margin-bottom: 1em;
+}
+
+.form-row input {
+  border: none;
+  border-radius: 1em;
+  width: 100%;
+  padding: 1em;
+  height: 50px;
+}
+
+.form-row textarea {
+  display: block;
+  width: 100%;
+  height: 100%;
+  resize: none;
+}
+
+.form-row button {
+  padding: 1em;
+  border: 2px solid var(--Rich-Black);
+  border-radius: 0.5em;
+  cursor: pointer;
+  font-weight: 900;
+  text-transform: uppercase;
+  background-color: var(--Process-Cyan);
+  color: var(--Ghost-White);
+}
+
+.form-row button:hover {
+  background-color: var(--Indigo-Dye);
+}
+
+.form-row button:active {
+  background-color: var(--Engineering-Orange);
+}
+
+.social-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 1;
+}
+
+.social-links a {
+  width: 20%;
+  height: 100%;
+}
+
+.social-links img {
+  width: 100%;
+  height: 100%;
 }

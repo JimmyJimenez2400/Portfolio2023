@@ -161,18 +161,22 @@
       <div class="contact-container">
         <section class="contact">
           <h2>Contact Me!</h2>
-          <form action="">
-            <ul>
-              <li>
+          <form action="" class="contact-form">
+            <ul class="form-list">
+              <li class="form-row">
                 <label for="full_name">Full Name:</label>
                 <input type="text" name="full_name" id="full_name" placeholder="John Doe">
               </li>
-              <li>
+              <li class="form-row">
                 <label for="email">Email: </label>
                 <input type="text" id="email" name="email" placeholder="johndoe@example.com">
               </li>
-              <li>
+              <li class="form-row">
+                <label for="user_comment">Message: </label>
                 <textarea name="user_comment" id="user_comment" cols="30" rows="10"></textarea>
+              </li>
+              <li class="form-row">
+                <button type="submit">Submit</button>
               </li>
 
             </ul>
@@ -181,8 +185,17 @@
       </div>
     </main>
     <footer id="footer">
-      <div class="footer">
-        <h2>&copy; Jimmy Jimenez</h2>
+      <div class="footer-container">
+        <h2>&copy; Jimmy Jimenez 2023</h2>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/jimmy-jimenez-47125516a/"><img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original-wordmark.svg" /></a>
+          <a href="https://github.com/JimmyJimenez2400"><img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original-wordmark.svg" />
+          </a>
+        </div>
+
+
       </div>
     </footer>
   </div>
