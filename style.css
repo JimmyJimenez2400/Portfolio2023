@@ -110,11 +110,10 @@ img {
   padding: 2rem 0;
   font-weight: 900;
   flex: 1;
+  text-decoration: none;
+  color: var(--Ghost-White);
 }
 
-.logo a {
-  color: white;
-}
 
 
 .header-links {
@@ -123,6 +122,57 @@ img {
   justify-content: space-around;
   font-size: clamp(16px, 1.5vw, 60rem);
 }
+
+.hamburger {
+  position: fixed;
+  z-index: 100;
+  top: 1rem;
+  right: 1rem;
+  padding: 4px;
+  border: var(--Rich-Black) solid 1px;
+  background: var(--Ghost-White);
+  cursor: pointer;
+}
+
+.hamburger .closeIcon {
+  display: none;
+}
+
+.menu {
+  position: fixed;
+  transform: translateY(-100%);
+  transition: transform 0.2s;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  background-color: var(--Rich-Black);
+  color: var(--Ghost-White);
+  list-style: none;
+  padding-top: 4rem;
+}
+
+.showMenu {
+  transform: translateY(0);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-item {
+  display: block;
+  margin: 2rem 4rem;
+  padding: 2rem;
+  font-size: 1.8rem;
+  border: 2px solid var(--Process-Cyan);
+  text-decoration: none;
+  background-color: var(--Engineering-Orange);
+  color: var(--Ghost-White);
+}
+
+
 
 .header-links a {
   color: white;
@@ -207,52 +257,61 @@ img {
   border-radius: 2rem;
   flex-wrap: wrap;
   line-height: 1.4em;
-
 }
 
-.project-card {
+.card-list {
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(4, 1fr);
   background-color: var(--Ghost-White);
-  color: var(--Rich-Black);
-  border-radius: 1em;
   padding: 2rem;
-  overflow: scroll;
+  border-radius: 2rem;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  background-color: var(--Rich-Black);
+  border-radius: 1em;
+  line-height: 2;
+  box-shadow: 0 10px 40px var(--Indigo-Dye);
+  font-size: clamp(16px, 1.3vw, 60rem);
+}
+
+
+
+.card>img,
+.card>div {
+  margin-bottom: 1em;
 }
 
 .card-img {
+  max-width: 100%;
   height: auto;
-  max-width: 100%;
-  object-fit: cover;
+  display: block;
   border-radius: 1em;
-  margin-bottom: 1em;
+
 }
 
-.card-description {
-  margin-bottom: 1em;
+.card-content {
+  flex: 2;
 }
 
-.card-links {
+.card-info {
   display: flex;
-}
-
-
-.card-links li {
-  display: grid;
-  grid-template-columns: auto auto;
-  flex: 1;
-  text-align: center;
-}
-
-.card-links a {
-  padding: 0.5em;
-  margin-right: 1em;
-  background-color: var(--Rich-Black);
+  justify-content: end;
+  gap: 20px;
   color: var(--Ghost-White);
-  max-width: 100%;
-  border-radius: 1em;
+  font-size: inherit;
 }
+
+.card-link {
+  flex-shrink: 1;
+  color: inherit;
+}
+
+
 
 
 .skills {
